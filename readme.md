@@ -7,7 +7,7 @@
 
 [![Development Workflow](https://github.com/kaw393939/docker_flask/actions/workflows/dev.yml/badge.svg)](https://github.com/Kartha97/project/blob/master/.github/workflows/dev.yml)
 
-* [Developmental Deployment](https://kartha-project1-dev.herokuapp.com/)
+* [Developmental Deployment](https://karthat-project1-dev.herokuapp.com/)
 
 ## Setting up CI/CD
 
