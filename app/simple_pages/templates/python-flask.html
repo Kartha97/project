@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block content %}
+    <span class="d-none">This Page is about Python/flask</span>
+    <div class="container">
+        <div class="text">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-header"><Strong>Python</strong></p>
+                    <p class="card-text">According to its official website, Python is “an interpreted, object-oriented, high-level programming language with dynamic semantics.” It has a clear and simple syntax that makes it very easy to learn, which turns it into the perfect gateway for programming beginners. That’s because the language emphasizes readability and makes coding very easy. </p>
+                    <a href="https://www.python.org/about/gettingstarted/" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <P class="card-header"><strong>Flask</strong></P>
+            <p class="card-text">Flask is a web framework. This means flask provides you with tools, libraries and technologies that allow you to build a web application. This web application can be some web pages, a blog, a wiki or go as big as a web-based calendar application or a commercial website.</p>
+            <a href="https://pymbook.readthedocs.io/en/latest/flask.html" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">For Creating WebPage Content</h5>
+                </div>
+                <div class="card-body">
+                    <p>To make the website pages I visited other websites to learn more about the components, tools, forms, and layouts, among other things. Then, in order to use the carousel and redirect the carousel images to their respective webpages, I studied the bootstrap v5.1 manual website. And pytest was used to test the web pages to ensure that they passed all of the tests. I used to add some information to the homepage and then test it to ensure that there are no problems and that all of the tests pass.</p>
+                </div>
+            </div>
+
+<div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Testing Using Pytest</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Step1:</strong> I Installed all the necessary library nedded for deploying</p>
+                    <p><strong>Step2:</strong> Then I created a tests folder under app directory and created file for testing</p>
+                    <p><strong>Step3:</strong> Then I created testcases for testing as follows</p>
+                    <img src="{{ url_for('static', filename='images/ss4.png') }}" class="rounded img-fluid"
+                                 alt="...">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4>Outline</h4>
+                    <b>Project Root Folder <- Root of the project</b>
+                    <ul style="list-style-type: square">
+                        <li>docker-compose.yml <- Orchestration file that contains the configuration to develop locally,
+                            it overrides the Dockerfile to run the flask development server instead of running the
+                            gunicorn server that is used for hosting on Heroku
+                        </li>
+                        <li>Dockerfile <-File used to create an image to run in a container that runs the program</li>
+                        <li>heroku.yml <-It allows you to build docker images on heroku and also to specify add-ons and
+                            configure variables which can created during app provisioning
+                        </li>
+                        <li>pytest.ini <-This file consists of the pytest configuration if it has the pytest section. It
+                            is the main config file which can make changes in the running mode of pytest.
+                        </li>
+                        <li>readme.md <-It's a text file that provides information for the user about the project, as
+                            well as instructions, assistance, and information on patches and upgrades.
+                        </li>
+                        <li>requirements.txt <-It is a sort of file that typically contains information on all the
+                            libraries, modules, and packages that are utilized in the development of a project. It also
+                            keeps track of all the files and packages that the project depends on or needs to execute.
+                        </li>
+                        <li>setup.py <-It indicates that a module or package has likely been packaged and distributed
+                            with it.
+                        </li>
+                    </ul>
+                    <b>.github Folder <- The .github folder contains Workflows, issue templates, pull request
+                        templates and other project-specific files are all stored under the. github directory.</b><br>
+                    <b>workflows Folder <- The workflows folder contains Workflows of the project.</b>
+                    <ul style="list-style-type: square">
+                        <li>dev.yml <- This contains all the environment variable, command line arguments, properties
+                            used for development.
+                        </li>
+                        <li>prod.yml <- This contains all the environment variable, command line arguments, properties
+                            used for production.
+                        </li>
+                    </ul>
+                    <b>app Folder <- The app folder contains all the html,js,css or images required for the project.</b>
+                    <br>
+                    <b>simple_pages Folder <- The folder contains all the html and _init_.py files required for the
+                        project.</b><br>
+                    <b>templates Folder <- The templates folder contains all the html files required for the
+                        project.</b>
+                    <ul style="list-style-type: square">
+                        <li>index.html <-This is the homepage of the project.</li>
+                        <li>Docker.html <-This contains information about the GIT.</li>
+                        <li>Git.html <-This contains information about the DOCKER.</li>
+                        <li>python-flask.html <-This contains information about the PYTHON/FLASK.</li>
+                        <li>ci-cd.html <-This contains information about the CI/CD.</li>
+                    </ul>
+                    <b>static Folder <- The static folder contains all the css, images and js files required for the
+                        project.</b>
+                    <ul style="list-style-type: square">
+                        <li>css folder <-It contains all the css files required for the project.</li>
+                        <li>images folder <-It contains all the images required for the project.</li>
+                        <li>js folder <-It contains all the js files required for the project.</li>
+                    </ul>
+                    <b>templates Folder <- The templates folder contains the base html file required for the
+                        project.</b>
+                    <b>test Folder <- The test folder contains the all the testing files required for the
+                        project.</b>
+                    <ul style="list-style-type: square">
+                        <li>simple_pages_tests.py <-It contains all the required test cases required for the project.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}

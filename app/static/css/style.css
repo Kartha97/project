@@ -1,3 +1,9 @@
 body {
-font-size: 200%;
+font-size: 100%;
+}
+.bold-class{
+    font-weight:700;
+}
+.carousel-inner{
+    height:600px;
 }

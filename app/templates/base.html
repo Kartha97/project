@@ -13,39 +13,49 @@
 
         <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
     {% endblock %}
+    <script>
+        function appendCSSPropertyOnNavbar(){
+            const url_page = window.location.href.split("/").slice(-1);
+            if(url_page == ""){
+                document.getElementById("index").classList.remove("link-secondary");
+                document.getElementById("index").classList.add("link-dark");
+            }else{
+                document.getElementById(url_page).classList.remove("link-secondary");
+                document.getElementById(url_page).classList.add("link-dark");
+            }
+        }
+
+    </script>
 
 </head>
-<body>
+<body onload="appendCSSPropertyOnNavbar()">
 <div class="container-fluid">
     <div class="row">
         <header class="mb-5">
             <!-- As a link -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
+                <div class="container-fluid">
                     <a class="navbar-brand" href="/">My Site</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
+                    <div class="collapse navbar-collapse header-side" id="navbarNav">
+                        <ul class="nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="{{ url_for('simple_pages.show', page="index")}}">Home</a>
+                                <a id="index" class="nav-link link-secondary" aria-current="page" href="{{ url_for('simple_pages.show', page="index")}}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="about")}}">About</a>
+                                <a id="Docker" class="nav-link link-secondary" href="{{ url_for('simple_pages.show', page="Docker")}}">About Docker</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page1")}}">Page 1</a>
+                                <a id="Git" class="nav-link link-secondary" href="{{ url_for('simple_pages.show', page="Git")}}">About Git</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page2")}}">Page 2</a>
+                                <a id="python-flask" class="nav-link link-secondary" href="{{ url_for('simple_pages.show', page="python-flask")}}">About python/flask</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page3")}}">Page 3</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page4")}}">Page 4</a>
+                                <a id="ci-cd" class="nav-link link-secondary" href="{{ url_for('simple_pages.show', page="ci-cd")}}">About CI/CD</a>
                             </li>
                         </ul>
                     </div>

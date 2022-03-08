@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% block content %}
+    <span class="d-none">This Page is about Git</span>
+    <div class="container">
+        <div class="text">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">What is Git</h5>
+                    <p class="card-text">Git is a version control system used for tracking changes in computer
+                        files. It is generally used for source code management in software development.</p>
+                    <ul class="list">
+                        <li>Git is used to tracking changes in the source code</li>
+                        <li>The distributed version control tool is used for source code management</li>
+                        <li>It allows multiple developers to work together</li>
+                        <li>It supports non-linear development through its thousands of parallel branches</li>
+                    </ul>
+                    <p><strong>Features of Git</strong><br></p>
+                    <ul class="list">
+                        <li>Tracks history</li>
+                        <li>Free and open source</li>
+                        <li>Supports non-linear development</li>
+                        <li>Creates backups</li>
+                        <li>Scalable</li>
+                        <li>Supports collaboration</li>
+                        <li>Branching is easier</li>
+                        <li>Distributed development</li>
+                    </ul>
+                    <a href="https://git-scm.com/book/en/v2" class="btn btn-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Git Workflow</h5>
+                            <img src="{{ url_for('static', filename='images/git-workflow.jpeg') }}" class="img-fluid"
+                                 alt="...">
+                            <p>The Git workflow is divided into three states:</p>
+                            <ul class="list">
+                                <li>Working directory - Modify files in your working directory</li>
+                                <li>Staging area (Index) - Stage the files and add snapshots of them to your staging
+                                    area
+                                </li>
+                                <li>Git directory (Repository) - Perform a commit that stores the snapshots permanently
+                                    to your Git
+                                    directory. Checkout any existing version, make changes, stage them and commit.
+                                </li>
+                                <li>Offer an easier way of getting started with the application</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Git Repositories</h5>
+                </div>
+                <div class="card-body">
+                    <img src="{{ url_for('static', filename='images/git-distributed-workflow-diagram.png') }}"
+                         class="img-fluid"
+                         alt="...">
+                    <p class="card-text">A Git <strong>repository</strong>(or <strong>repo</strong> for short) contains
+                        all of the project files
+                        and the entire revision history. You’ll take an ordinary folder of files(such as a website’s
+                        root
+                        folder), and tell Git to make it a repository. This creates a <strong>.git</strong> subfolder,
+                        which
+                        contains all of the Git metadata for tracking changes.</p></p>
+                    <p>On Unix-based operating systems such as macOS, files and folders that start with a period (.) are
+                        hidden,
+                        so you will not see the .git folder in the macOS Finder unless you show hidden files, but it’s
+                        there!
+                        You might be able to see it in some code editors.</p>
+                    <p><strong>Remote Repositories (on GitHub & Bitbucket)</strong>Storing a copy of your Git repo with
+                        an
+                        online host (such as GitHub or Bitbucket) gives you a centrally located place where you can
+                        upload your
+                        changes and download changes from others, letting you collaborate more easily with other
+                        developers.
+                        After you have a remote repository set up, you upload (push) your files and revision history to
+                        it.
+                        After someone else makes changes to a remote repo, you can download (pull) their changes into
+                        your local
+                        repo.</p>
+                    <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository"
+                       class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Stage & Commit Files</h5>
+                </div>
+                <div class="card-body">
+                    <p>Think of Git as keeping a list of changes to files. So how do we
+                        tell Git to record our changes? Each recorded change to a file or set of files is called a
+                        commit.</p>
+                    <p>Before we make a commit, we must tell Git what files we want to commit. This is called staging
+                        and uses
+                        the add command. Why must we do this? Why can’t we just commit the file directly? Let’s say
+                        you’re
+                        working on a two files, but only one of them is ready to commit. You don’t want to be forced to
+                        commit
+                        both files, just the one that’s ready. That’s where Git’s add command comes in. We add files to
+                        a
+                        staging area, and then we commit the files that have been staged.</p>
+                    <a href="https://git-scm.com/docs/git-commit" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Branches & Merging</h5>
+                </div>
+                <div class="card-body">
+                    <p>Git lets you branch out from the original code base. This lets you
+                        more easily work with other developers, and gives you a lot of flexibility in your workflow.</p>
+                    <p>Here’s an example of how Git branches are useful. Let’s say you need to work on a new feature for
+                        a
+                        website. You create a new branch and start working. You haven’t finished your new feature, but
+                        you get a
+                        request to make a rush change that needs to go live on the site today. You switch back to the
+                        master
+                        branch, make the change, and push it live. Then you can switch back to your new feature branch
+                        and
+                        finish your work. When you’re done, you merge the new feature branch into the master branch and
+                        both the
+                        new feature and rush change are kept!</p>
+                    <p>When you merge two branches (or merge a local and remote branch) you can sometimes get a
+                        conflict. For
+                        example, you and another developer unknowingly both work on the same part of a file. The other
+                        developer
+                        pushes their changes to the remote repo. When you then pull them to your local repo you’ll get a
+                        merge
+                        conflict. Luckily Git has a way to handle conflicts, so you can see both sets of changes and
+                        decide
+                        which you want to keep.</p>
+                    <a href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging"
+                       class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Git Tags</h5>
+                </div>
+                <div class="card-body">
+                    <p>Tags make a point as a specific point in Git history. Tags are used to mark
+                        a
+                        commit stage as relevant. We can tag a commit for future reference. Primarily, it is used to
+                        mark a
+                        project's initial point like v1.1.</p>
+                    <p>Tags are much like branches, and they do not change once initiated. We can have any number of
+                        tags on a
+                        branch or different branches. The below figure demonstrates the tags on various branches.</p>
+                    <img src="{{ url_for('static', filename='images/git-tags.png') }}" class="img-fluid" alt="...">
+                    <p>In the above image, there are many versions of a branch. All these versions are tags in the
+                        repository.</p>
+                    <p><strong>When to create a Tag:</strong></p>
+                    <ul class="list">
+                        <li><p>When you want to create a release point for a stable version of your code</p></li>
+                        <li><p>When you want to create a historical point that you can refer to reuse in the future.
+                        </li>
+                    </ul>
+                    <p><strong>Types of Git tags</strong><br>There are two types of tags in git. They are as:</p>
+                    <ul class="list">
+                        <li><p>Annotated tag</p></li>
+                        <li><p>Light-weighted tag</p></li>
+                    </ul>
+                    <a href="https://www.javatpoint.com/git-tags" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

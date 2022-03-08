@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% block content %}
+    <span class="d-none">This Page is about Docker</span>
+    <div class="container">
+        <div class="text">
+            <p><strong>Docker</strong><br>Docker is an open source platform for building, deploying, and managing
+                containerized applications. Learn about containers, how they compare to VMs, and why Docker is so widely
+                adopted and used.</p>
+            <p><strong>What is Docker?</strong><br>Docker is an open source containerization platform. It enables
+                developers to package applications into containers—standardized executable components combining
+                application source code with the operating system (OS) libraries and dependencies required to run that
+                code in any environment. Containers simplify delivery of distributed applications, and have become
+                increasingly popular as organizations shift to cloud-native development and hybrid multicloud
+                environments.</p>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Docker Container</h5>
+                                <p>A container is a standard unit of software that packages up code and all its
+                                    dependencies so the
+                                    application runs quickly and reliably from one computing environment to another. A
+                                    Docker
+                                    container image is a lightweight, standalone, executable package of software that
+                                    includes
+                                    everything needed to run an application: code, runtime, system tools, system
+                                    libraries and
+                                    settings.
+                                </p>
+                                <a href="https://www.docker.com/resources/what-container" class="btn btn-primary">Read
+                                    More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Docker Images</h5>
+                            <p>A container is a standard unit of software that packages up code and all its dependencies
+                                so the
+                                application runs quickly and reliably from one computing environment to another. A
+                                Docker
+                                container image is a lightweight, standalone, executable package of software that
+                                includes
+                                everything needed to run an application: code, runtime, system tools, system libraries
+                                and
+                                settings.
+                            </p>
+                            <a href="https://www.docker.com/resources/what-container" class="btn btn-primary">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Docker Repository Link</h5>
+                </div>
+                <div class="card-body">
+                    <p><a href="https://hub.docker.com/repositories">click here</a> and login to go to your docker
+                        repository
+                        library.</p>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Docker Commands</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">docker –version</h3>
+                    <p>This command is used to get the currently installed version of docker</p>
+
+
+                    <h3 class="card-title">docker pull</h3>
+                    <strong>Usage: docker pull "image-name"
+                    </strong>
+                    <p>This command is used to pull images from the docker repository(hub.docker.com)</p>
+
+
+                    <h3 class="card-title">docker ps</h3>
+                    <p>This command is used to list the running containers</p>
+
+
+                    <h3 class="card-title">docker ps -a</h3>
+                    <p>This command is used to show all the running and exited containers</p>
+
+
+                    <h3 class="card-title">docker exec</h3>
+                    <strong>Usage: docker exec -it "container id" bash
+                    </strong>
+                    <p>This command is used to access the running container</p>
+
+
+                    <h3 class="card-title">docker stop</h3>
+                    <strong>Usage: docker stop "container id"
+                    </strong>
+                    <p>This command stops a running container</p>
+
+
+                    <h3 class="card-title">docker kill</h3>
+                    <strong>Usage: docker kill "container id"
+                    </strong>
+                    <p>This command kills the container by stopping its execution immediately. The difference between
+                        ‘docker kill’ and ‘docker stop’ is that ‘docker stop’ gives the container time to shutdown
+                        gracefully, in situations when it is taking too much time for getting the container to stop, one
+                        can opt to kill it</p>
+
+
+                    <h3 class="card-title">docker commit</h3>
+                    <strong>Usage: docker commit "conatainer id" "username/imagename"
+                    </strong>
+                    <p>This command creates a new image of an edited container on the local system</p>
+
+                    <h3 class="card-title">docker push</h3>
+                    <strong>Usage: docker push "username/image name"</strong>
+                    <p>This command is used to push an image to the docker hub repository</p>
+
+                    <h3 class="card-title">docker images</h3>
+                    <p>This command lists all the locally stored docker images</p>
+
+                    <h3 class="card-title">docker rm</h3>
+                    <strong>Usage: docker rm "container id"
+                    </strong>
+                    <p>This command is used to delete a stopped container</p>
+
+                    <h3 class="card-title">docker build</h3>
+                    <strong>Usage: docker build "path to docker file"
+                    </strong>
+                    <p>This command is used to build an image from a specified docker file</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+{% endblock %}

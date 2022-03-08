@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+    <span class="d-none">This Page is about CI/CD</span>
+    <div class="container">
+        <div class="text">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-header">Git hub deployment congiguration</h4>
+                            <p class="card-text"><strong>Step1:</strong> Create a dev.yml & prod.yml </p>
+                            <p class="card-text"><strong>Step2:</strong> configure when to trigger the job by using the
+                                properties.
+                                In the following configuration currently it triggeres the job on push to master. </p>
+                            <img src="{{ url_for('static', filename='images/ss1.png') }}" class="rounded mx-auto d-block"
+                                 alt="...">
+                            <p class="card-text"><strong>Step3:</strong> Make congiruration to run testes. using the
+                                following code. </p>
+                            <img src="{{ url_for('static', filename='images/ss2.png') }}" class="rounded img-fluid"
+                                 alt="...">
+                            <p class="card-text"><strong>Step4:</strong> Extract the docker image and docker tag of the
+                                container,
+                                provided username and password for login into docker hub and extracting the details.</p>
+
+                            <p class="card-text"><strong>Step5:</strong> Deploy application in heroku. Provided email,
+                                app name and API key</p>
+                            <img src="{{ url_for('static', filename='images/ss3.png') }}" class="rounded img-fluid"
+                                 alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Configuration in Heroku:</h5>
+                            <p><strong>Step1:</strong> Create seperate app for prod and dev in heroku.</p>
+                            <p><strong>Step2:</strong> Step2: Extract the API keys from the application settings after
+                                creation and save in github secret.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
