@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
     <span class="d-none">This Page is about CI/CD</span>
-    <div class="container">
-        <div class="text">
+    <div class="row container">
+        <div class="col-8 text">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card">
@@ -42,6 +42,10 @@
                 </div>
             </div>
 
+        </div>
+        <div class="col">
+            <img src="{{ url_for('static', filename='images/copyright.png') }}" class="rounded img-fluid"
+                                 alt="...">
         </div>
     </div>
 {% endblock %}

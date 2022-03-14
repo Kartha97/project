@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
     <span class="d-none">This Page is about Docker</span>
-    <div class="container">
-        <div class="text">
+    <div class="row container">
+        <div class="col-9 text">
             <p><strong>Docker</strong><br>Docker is an open source platform for building, deploying, and managing
                 containerized applications. Learn about containers, how they compare to VMs, and why Docker is so widely
                 adopted and used.</p>
@@ -135,7 +135,9 @@
                 </div>
             </div>
         </div>
-
-    </div>
+        <div class="col">
+            <img src="{{ url_for('static', filename='images/copyright.png') }}" class="rounded img-fluid"
+                                 alt="...">
+        </div>
     </div>
 {% endblock %}

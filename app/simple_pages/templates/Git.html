@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
     <span class="d-none">This Page is about Git</span>
-    <div class="container">
-        <div class="text">
+    <div class="row container">
+        <div class="col-9 text">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card">
@@ -68,7 +68,7 @@
                         root
                         folder), and tell Git to make it a repository. This creates a <strong>.git</strong> subfolder,
                         which
-                        contains all of the Git metadata for tracking changes.</p></p>
+                        contains all of the Git metadata for tracking changes.</p>
                     <p>On Unix-based operating systems such as macOS, files and folders that start with a period (.) are
                         hidden,
                         so you will not see the .git folder in the macOS Finder unless you show hidden files, but it’s
@@ -173,6 +173,10 @@
                     <a href="https://www.javatpoint.com/git-tags" class="btn btn-primary">Read More</a>
                 </div>
             </div>
+        </div>
+        <div class="col">
+            <img src="{{ url_for('static', filename='images/copyright.png') }}" class="rounded img-fluid"
+                                 alt="...">
         </div>
     </div>
 {% endblock %}
