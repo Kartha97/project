@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="text">
+        <H3>Unit Testing and the Arrange, Act and Assert (AAA) Pattern</H3>
+        <div class="row">
+            <div class="col-7">
+                <p>The AAA (Arrange-Act-Assert) pattern has become almost a standard across the industry. It suggests that you should divide your test method into three sections: arrange, act and assert. Each one of them only responsible for the part in which they are named after.</p>
+                <p>So the arrange section you only have code required to setup that specific test. Here objects would be created, mocks setup (if you are using one) and potentially expectations would be set. Then there is the Act, which should be the invocation of the method being tested. And on Assert you would simply check whether the expectations were met. More info can be found HERE.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article2/ss1.png') }}" class="rounded"
+                         alt="..." style="width:300px; height:200px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <h5>The Pattern</h5>
+                <p><em>Arrange-Act-Assert</em> is a great way to structure test cases. It prescribes an order of operations:</p>
+                <ol><li><strong><em>Arrange</em> </strong>inputs and targets. <em>Arrange </em>steps should set up the test case. Does the test require any objects or special settings? Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test.</li>
+                    <li><strong><em>Act</em> </strong>on the target behavior. <em>Act </em>steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behavior.</li>
+                    <li><strong><em>Assert</em> </strong>expected outcomes. <em>Act </em>steps should elicit some sort of response. <em>Assert </em>steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.</li>
+                </ol>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article2/ss4.png') }}" class="rounded"
+                         alt="..." style="width:300px; height:200px">
+            </div>
+        </div>
+        <H6>Let’s look at how to apply the Arrange-Act-Assert pattern in Python code. I’ll use pytest for demonstration.</H6>
+        <div class="row">
+            <div class="col-7">
+                <H5>Unit Testing</H5>
+                <p>Let's look at the Unit test case shown in the image next where it shows multiple calculator classes being instantiated and used independently</p>
+                <ol><li>The <strong>Arrange </strong>step creates two instances of Calculator class.</li>
+                    <li>The <strong>Act </strong>step assign different values to the result attributes of Calculator class.</li>
+                    <li>The <strong>Assert </strong>step verifies that result value in two different instances showing they have two different values.</li>
+                </ol>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article2/ss2.png') }}" class="rounded"
+                         alt="..." style="width:300px; height:300px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5>Feature Testing</H5>
+                <p>Let’s kick it up a notch with a more complicated test. In the next test we test "/Docker" page in our application and validate it's response and check if it contains some information.</p>
+                <p>We can clearly see that the Arrange-Act-Assert pattern works for feature tests as well as unit tests.</p>
+                <ol><li>The <strong>Arrange </strong>step forms the endpoint URL.</li>
+                    <li>The <strong>Act </strong>steps call the API using the URL using client.get(url) and then parse the response’s body into response variable</li>
+                    <li>The <strong>Assert </strong>steps then verify that the HTTP status code was 200, meaning “OK” or “success,” and that the sentence “This Page is about Docker” appears somewhere in the response’s abstract data.</li>
+                </ol>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article2/ss3.png') }}" class="rounded"
+                         alt="..." style="width:300px; height:300px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5>Closing point</H5>
+                <p>Test code, in the same way as production code, is supposed to be clean and self-explanatory. Preempting what you are going to do just adds unnecessary clutter. You can still have a clear distinction of the three steps by using spaces and indentation. Which are ultimately the key features the compiler provides you to structure your code.</p>
+            </div>
+            <div class="col-5">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

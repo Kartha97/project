@@ -1,23 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
     <span class="d-none">This Page is about Docker</span>
-    <div class="row container">
-        <div class="col-9 text">
-            <p><strong>Docker</strong><br>Docker is an open source platform for building, deploying, and managing
-                containerized applications. Learn about containers, how they compare to VMs, and why Docker is so widely
-                adopted and used.</p>
-            <p><strong>What is Docker?</strong><br>Docker is an open source containerization platform. It enables
-                developers to package applications into containers—standardized executable components combining
-                application source code with the operating system (OS) libraries and dependencies required to run that
-                code in any environment. Containers simplify delivery of distributed applications, and have become
-                increasingly popular as organizations shift to cloud-native development and hybrid multicloud
-                environments.</p>
+    <div class="container">
+        <div class="text">
+            <div class="row">
+                <div class="col-7">
+                    <p><strong>Docker</strong><br>Docker is an open source platform for building, deploying, and managing
+                        containerized applications. Learn about containers, how they compare to VMs, and why Docker is so widely
+                        adopted and used.</p>
+                </div>
+                <div class="col-5">
+                    <p><strong>What is Docker?</strong><br>Docker is an open source containerization platform. It enables
+                        developers to package applications into containers—standardized executable components combining
+                        application source code with the operating system (OS) libraries and dependencies required to run that
+                        code in any environment. Containers simplify delivery of distributed applications, and have become
+                        increasingly popular as organizations shift to cloud-native development and hybrid multicloud
+                        environments.</p>
+                </div>
+            </div>
             <br>
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Docker Container</h5>
+                <div class="col-7">
+                            <h5>Docker Container</h5>
                                 <p>A container is a standard unit of software that packages up code and all its
                                     dependencies so the
                                     application runs quickly and reliably from one computing environment to another. A
@@ -30,13 +34,9 @@
                                 </p>
                                 <a href="https://www.docker.com/resources/what-container" class="btn btn-primary">Read
                                     More</a>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Docker Images</h5>
+                <div class="col-5">
+                            <h5>Docker Images</h5>
                             <p>A container is a standard unit of software that packages up code and all its dependencies
                                 so the
                                 application runs quickly and reliably from one computing environment to another. A
@@ -49,28 +49,12 @@
                             </p>
                             <a href="https://www.docker.com/resources/what-container" class="btn btn-primary">Read
                                 More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title">Docker Repository Link</h5>
-                </div>
-                <div class="card-body">
-                    <p><a href="https://hub.docker.com/repositories">click here</a> and login to go to your docker
-                        repository
-                        library.</p>
                 </div>
             </div>
             <br>
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title">Docker Commands</h5>
-                </div>
-                <div class="card-body">
+            <div class="row">
+                <h2>Docker Commands</h2>
+                <div class="col-7">
                     <h3 class="card-title">docker –version</h3>
                     <p>This command is used to get the currently installed version of docker</p>
 
@@ -109,7 +93,8 @@
                         gracefully, in situations when it is taking too much time for getting the container to stop, one
                         can opt to kill it</p>
 
-
+                </div>
+                <div class="col-5">
                     <h3 class="card-title">docker commit</h3>
                     <strong>Usage: docker commit "conatainer id" "username/imagename"
                     </strong>
@@ -134,10 +119,6 @@
 
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <img src="{{ url_for('static', filename='images/copyright.png') }}" class="rounded img-fluid"
-                                 alt="...">
         </div>
     </div>
 {% endblock %}

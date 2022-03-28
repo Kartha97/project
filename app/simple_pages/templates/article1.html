@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="text">
+        <div class="row">
+            <div class="col-7">
+                <H5>Instantiation</H5>
+                <p>Instantiating a class is creating a copy of the class which inherits all class variables and methods. Instantiating a class in Python is simple. To instantiate a class, we simply call the class as if it were a function, passing the arguments that the __init__ method defines.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss1.png') }}" class="rounded"
+                         alt="..." style="width:300px; height:100px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5>Object&Class</H5>
+                <p>An object is simply a collection of data (variables) and methods (functions) that act on those data. Similarly, a class is a blueprint for that object. We can think of a class as a sketch (prototype) of a house.</p>
+                <p>We can create an object by instantiation it. For example in the Subtraction class from the picture substraction = Subtraction(). Here "substraction" is the object.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss2.png') }}" class="rounded"
+                         alt="..." style="width:300px; height:150px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5>Namespace</H5>
+                <p>A namespace is a collection of currently defined symbolic names along with information about the object that each name references. You can think of a namespace as a dictionary in which the keys are the object names and the values are the objects themselves. Each key-value pair maps a name to its corresponding object.</p>
+            </div>
+            <div class="col-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5>Constructor</H5>
+                <p>A constructor is a special type of method (function) which is used to initialize the instance members of the class.</p>
+                <p>In Python, the method the __init__() simulates the constructor of the class. This method is called when the class is instantiated. It accepts the self-keyword as a first argument which allows accessing the attributes or method of the class.</p>
+                <p>We can pass any number of arguments at the time of creating the class object, depending upon the __init__() definition. It is mostly used to initialize the class attributes. Every class must have a constructor, even if it simply relies on the default constructor.</p>
+                <p>Constructors can be of two types.</p>
+                <ul>
+                    <li>Parameterized Constructor</li>
+                    <li>Non-parameterized Constructor or default constructor</li>
+                </ul>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss3.png') }}" class="rounded"
+                         alt="..." style="width:300px; height:150px;">
+                <img src="{{ url_for('static', filename='images/Article1/ss4.png') }}" class="rounded"
+                         alt="..." style="width:300px; height:200px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5>Figures</H5>
+                <p>In testing, a fixture provides a defined, reliable and consistent context for the tests. This could include environment (for example a database configured with known parameters) or content (such as a dataset).</p>
+                <p>Fixtures define the steps and data that constitute the arrange phase of a test (see Anatomy of a test). In pytest, they are functions you define that serve this purpose. They can also be used to define a test’s act phase; this is a powerful technique for designing more complex tests.</p>
+                <p>The services, state, or other operating environments set up by fixtures are accessed by test functions through arguments. For each fixture used by a test function there is typically a parameter (named after the fixture) in the test function’s definition.</p>
+                <p>We can tell pytest that a particular function is a fixture by decorating it with <strong>@pytest.fixture</strong>. Here’s a simple example of what a fixture in pytest might look like in the picture next.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss5.png') }}" class="rounded"
+                         alt="..." style="width:300px; height:350px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5>Type Casting</H5>
+                <p>The process of converting the value of one data type (integer, string, float, etc.) to another data type is called type conversion. Python has two types of type conversion.</p>
+                <ul>
+                    <li>Implicit Type Conversion</li>
+                    <li>Explicit Type Conversion</li>
+                </ul>
+                <H5>Implicit Type Conversion</H5>
+                <p>In Implicit type conversion, Python automatically converts one data type to another data type. This process doesn't need any user involvement.</p>
+                <H5>Explicit Type Conversion</H5>
+                <p>In Explicit Type Conversion, users convert the data type of an object to required data type. We use the predefined functions like int(), float(), str(), etc to perform explicit type conversion. This type of conversion is also called typecasting because the user casts (changes) the data type of the objects.</p>
+            </div>
+            <div class="col-5">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5>unit test</H5>
+                <p>A unit test is a way of testing a unit - the smallest piece of code that can be logically isolated in a system. In most programming languages, that is a function, a subroutine, a method or property. The isolated part of the definition is important.</p>
+                <p>unittest in Python is a unit testing framework, sometimes referred to as “PyUnit,” is a Python language version of JUnit, by Kent Beck and Erich Gamma. JUnit is, in turn, a Java version of Kent’s Smalltalk testing framework. Each is the de facto standard unit testing framework for its respective language.</p>
+                <p>To achieve this, <a class="reference internal" href=https://docs.python.org/3/library/unittest.html#module-unittest title="unittest: Unit testing framework for Python."><code class="xref py py-mod docutils literal notranslate"><span class="pre">unittest</span></code></a> supports some important concepts in an object-oriented way:</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss6.png') }}" class="rounded"
+                         alt="..." style="width:350px; height:400px;">
+            </div>
+        </div>
+        <div class="row">
+                <H5>Static</H5>
+            <div class="col-7">
+                <p>When we declare a variable inside a class, but outside the method, it is called a static or class variable. It can be called directly from a class but not through the instances of a class. However, the static variables are quite different from the other member, and it does not conflict with the same variable name in the python programming.</p>
+            </div>
+            <div class="col-5">
+            </div>
+        </div>
+        <div class="row">
+                <H5>Static method</H5>
+            <div class="col-7">
+                <p>Python has a static method that belongs to the class. It is just like a static variable that bounds to the class rather than the class's object. A static method can be called without creating an object for the class. It means we can directly call the static method with the reference of the class name. Furthermore, a static method is constrained with a class; hence it cannot change the state of an object.</p>
+                <p>There are two ways for creating a static method.<p>
+                <ul>
+                    <li>Using staticmethod()</li>
+                    <li>Using @staticmethod</li>
+                </ul>
+                <H5>Using staticmethod()</H5>
+                <p>Let’s directly jump to sample code snippet on how to use the staticmethod() approach in the picture next.</p>
+                <p>Note that we called the addNumbers we created without an object. There were no surprises there. This approach is controlled as at each place, it is possible to create a static method out of a class method as well. Let’s see another approach with the same example here.</p>
+                <H5>Using @staticmethod</H5>
+                <p>This is a more subtle way of creating a Static method as we do not have to rely on a statement definition of a method being a class method and making it static at each place you make it static.<br/>Let’s use this annotation in a code snippet:</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss7.png') }}" class="rounded"
+                         alt="..." style="width:350px; height:300px;">
+                <img src="{{ url_for('static', filename='images/Article1/ss8.png') }}" class="rounded"
+                         alt="..." style="width:350px; height:300px;">
+            </div>
+        </div>
+        <div class="row">
+                <H5>Instance</H5>
+            <div class="col-7">
+                <p>Instance is an object that belongs to a class. For instance, list is a class in Python. When we create a list, we have an instance of the list class.</p>
+            </div>
+            <div class="col-5">
+            </div>
+        </div>
+        <div class="row">
+                <H5>instance method</H5>
+            <div class="col-7">
+                <p>Instance attributes are those attributes that are not shared by objects. Every object has its own copy of the instance attribute.</p>
+                <p>For example, consider a class shapes that have many objects like circle, square, triangle, etc. having its own attributes and methods. An instance attribute refers to the properties of that particular object like edge of the triangle being 3, while the edge of the square can be 4.</p>
+                <p>An instance method can access and even modify the value of attributes of an instance. It has one default parameter:-</p>
+                <p><span>&#8226;</span> self – It is a keyword which points to the current passed instance. But it need not be passed every time while calling an instance method.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss9.png') }}" class="rounded"
+                         alt="..." style="width:350px; height:200px;">
+            </div>
+        </div>
+        <div class="row">
+                <H5>Encapsulation</H5>
+            <div class="col-7">
+                <p>Encapsulation is one of the fundamental concepts in object-oriented programming (OOP). It describes the idea of wrapping data and the methods that work on data within one unit. This puts restrictions on accessing variables and methods directly and can prevent the accidental modification of data. To prevent accidental change, an object’s variable can only be changed by an object’s method. Those types of variables are known as private variables.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss10.png') }}" class="rounded"
+                         alt="..." style="width:350px; height:200px;">
+            </div>
+        </div>
+        <div class="row">
+            <H5>Inheritance</H5>
+            <div class="col-7">
+                <p>Inheritance is the capability of one class to derive or inherit the properties from another class. The class that derives properties is called the derived class or child class and the class from which the properties are being derived is called the base class or parent class. The benefits of inheritance are:</p>
+                <ul><li>It represents real-world relationships well.</li><li>It provides the reusability of a code. We don’t have to write the same code again and again. Also, it allows us to add more features to a class without modifying it.</li><li>It is transitive in nature, which means that if class B inherits from another class A, then all the subclasses of B would automatically inherit from class A.</li></ul>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss11.jpeg') }}" class="rounded"
+                         alt="..." style="width:350px; height:200px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5>Polymorphism</H5>
+                <p>Polymorphism simply means having many forms. For example, we need to determine if the given species of birds fly or not, using polymorphism we can do this using a single function.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss12.webp') }}" class="rounded"
+                         alt="..." style="width:350px; height:150px;">
+            </div>
+        </div>
+        <div class="row">
+            <H5>Abstraction</H5>
+            <div class="col-7">
+                <p>Abstraction is used to hide the internal functionality of the function from the users. The users only interact with the basic implementation of the function, but inner working is hidden. User is familiar with that "what function does" but they don't know "how it does."</p>
+            </div>
+            <div class="col-5">
+            </div>
+        </div>
+        <div class="row">
+            <H5>Overview of SOLID Principles</H5>
+            <div class="col-7">
+                <p>So, what is SOLID and how does it help us write better code? Simply put, Martin and Feathers' design principles encourage us to create more maintainable, understandable, and flexible software. Consequently, as our applications grow in size, we can reduce their complexity and save ourselves a lot of headaches further down the road!</p>
+                <p>The following five concepts make up our SOLID principles:</p>
+                <ol>
+                    <li><strong>S</strong>ingle Responsibility</li>
+                    <li><strong>O</strong>pen/Closed</li>
+                    <li><strong>L</strong>iskov&nbsp;Substitution</li>
+                    <li><strong>I</strong>nterface&nbsp;Segregation</li>
+                    <li><strong>D</strong>ependency Inversion</li>
+                </ol>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss14.jpeg') }}" class="rounded"
+                         alt="..." style="width:350px; height:150px;">
+            </div>
+        </div>
+        <div class="row">
+            <H5>Overview of Design Patterns</H5>
+            <div class="col-7">
+                <p>Design patterns have been evolved over a long period of time and they provide best solutions to certain problems faced during software development. Learning these patterns helps unexperienced developers to learn software design in an easy and faster way.</p>
+                <H6>Types of Design Patterns</H6>
+                <p>As per the design pattern reference book Design Patterns - Elements of Reusable Object-Oriented Software , there are 23 design patterns which can be classified in three categories: Creational, Structural and Behavioral patterns.</p>
+                <h6>Creational Patterns</h6>
+                <p>These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator. This gives program more flexibility in deciding which objects need to be created for a given use case.</p>
+                <h6>Creational Patterns</h6>
+                <p>These design patterns concern class and object composition. Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.</p>
+                <h6>Creational Patterns</h6>
+                <p>These design patterns are specifically concerned with communication between objects.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article1/ss13.png') }}" class="zoom rounded"
+                         alt="..." style="width:350px; height:150px;">
+            </div>
+        </div>
+    </div>
+{% endblock %}
