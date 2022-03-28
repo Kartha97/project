@@ -22,12 +22,17 @@ def test_calculator_get_result_method():
 def test_calculator_result_property():
     """Testing the Calculator"""
     #  these show multiple calculator classes being instantiated and used independently
+    #Arrange
     calc1 = Calculator()
     calc2 = Calculator()
-    calc1.result = 5
-    calc2.result = 6
-    assert calc1.result == 5
-    assert calc2.result == 6
+
+    #Act
+    calc1.set_result(5)
+    calc2.set_result(6)
+
+    #Assert
+    assert calc1.get_result() == 5
+    assert calc2.get_result() == 6
 
 
 def test_calculator_add_method():

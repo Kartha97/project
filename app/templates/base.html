@@ -29,12 +29,12 @@
 
 </head>
 <body onload="appendCSSPropertyOnNavbar()">
-<div class="container-fluid">
+<div class="container" style="width:70%">
     <div class="row">
         <header class="mb-5">
             <!-- As a link -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
+                <div class="container">
                     <a class="navbar-brand" href="/">My Site</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,17 +45,27 @@
                             <li class="nav-item">
                                 <a id="index" class="nav-link link-secondary" aria-current="page" href="{{ url_for('simple_pages.show', page="index")}}">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a id="Git" class="nav-link link-secondary" href="{{ url_for('simple_pages.show', page="Git")}}">About Git</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link link-secondary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Technologies
+                                  </a>
+                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a id="Git" class="dropdown-item link-secondary" href="{{ url_for('simple_pages.show', page="Git")}}">Git</a></li>
+                                    <li><a id="Docker" class="dropdown-item link-secondary" href="{{ url_for('simple_pages.show', page="Docker")}}">Docker</a></li>
+                                    <li><a id="python-flask" class="dropdown-item link-secondary" href="{{ url_for('simple_pages.show', page="python-flask")}}">python & flask</a></li>
+                                    <li><a id="ci-cd" class="dropdown-item link-secondary" href="{{ url_for('simple_pages.show', page="ci-cd")}}">CI & CD</a></li>
+                                  </ul>
                             </li>
-                            <li class="nav-item">
-                                <a id="Docker" class="nav-link link-secondary" href="{{ url_for('simple_pages.show', page="Docker")}}">About Docker</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="python-flask" class="nav-link link-secondary" href="{{ url_for('simple_pages.show', page="python-flask")}}">About python/flask</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="ci-cd" class="nav-link link-secondary" href="{{ url_for('simple_pages.show', page="ci-cd")}}">About CI/CD</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link link-secondary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Articles
+                                  </a>
+                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a id="article1" class="dropdown-item link-secondary" href="{{ url_for('simple_pages.show', page="article1")}}">Article-1</a></li>
+                                    <li><a id="article2" class="dropdown-item link-secondary" href="{{ url_for('simple_pages.show', page="article2")}}">Article-2</a></li>
+                                    <li><a id="article3" class="dropdown-item link-secondary" href="{{ url_for('simple_pages.show', page="article3")}}">Article-3</a></li>
+                                    <li><a id="article4" class="dropdown-item link-secondary" href="{{ url_for('simple_pages.show', page="article4")}}">Article-4</a></li>
+                                  </ul>
                             </li>
                         </ul>
                     </div>
@@ -69,7 +79,7 @@
     </div>
     <footer>
         Environment: {{ deployment_environment }} - Copyright: {{ year }}
-        Message: {{ mymessage }} {{ format_price(100) }}
+        Message: {{ mymessage }} CopyRight Cost: {{ format_price(200) }}
     </footer>
 
 </div>

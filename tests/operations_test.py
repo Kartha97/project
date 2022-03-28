@@ -3,16 +3,21 @@
 from calculator.operations import Addition, Subtraction, Multiplication
 
 
+def Factory(operation="add"):
+    """Factory Method"""
+    localizers = {
+        "add": Addition,
+        "substract": Subtraction,
+        "multiply": Multiplication,
+    }
+
+    return localizers[operation]()
+
 def test_calculator_operations_add():
     """Testing the Calculator"""
-    assert Addition.add(1, 1) == 2
-
-
-def test_calculator_operations_subtract():
-    """Testing the Calculator"""
-    assert Subtraction.subtract(1, 1) == 0
+    assert Factory("add").add(1, 1) == 2
 
 
 def test_calculator_operations_multiply():
     """Testing the Calculator"""
-    assert Multiplication.multiply(1, 1) == 1
+    assert Factory("multiply").multiply(1, 1) == 1

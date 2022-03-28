@@ -1,41 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
     <span class="d-none">This Page is about Python/flask</span>
-    <div class="row container">
-        <div class="col-9 text">
+    <div class="container">
+        <div class="text">
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-header"><Strong>Python</strong></p>
+                <div class="col-7">
+                            <p><Strong>Python</strong></p>
                             <p class="card-text">According to its official website, Python is “an interpreted,
                                 object-oriented, high-level programming language with dynamic semantics.” It has a clear
                                 and simple syntax that makes it very easy to learn, which turns it into the perfect
                                 gateway for programming beginners. That’s because the language emphasizes readability
                                 and makes coding very easy. </p>
                             <a href="https://www.python.org/about/gettingstarted/" class="btn btn-primary">Read more</a>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <P class="card-header"><strong>Flask</strong></P>
-                            <p class="card-text">Flask is a web framework. This means flask provides you with tools,
+                <div class="col-5">
+                            <P><strong>Flask</strong></P>
+                            <p>Flask is a web framework. This means flask provides you with tools,
                                 libraries and technologies that allow you to build a web application. This web
                                 application can be some web pages, a blog, a wiki or go as big as a web-based calendar
                                 application or a commercial website.</p>
                             <a href="https://pymbook.readthedocs.io/en/latest/flask.html" class="btn btn-primary">Read
                                 more</a>
-                        </div>
-                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">
+            <br>
+            <div class="row">
+                <div class="col-7">
                     <h5 class="card-title">For Creating WebPage Content</h5>
-                </div>
-                <div class="card-body">
                     <p>To make the website pages I visited other websites to learn more about the components, tools,
                         forms, and layouts, among other things. Then, in order to use the carousel and redirect the
                         carousel images to their respective webpages, I studied the bootstrap v5.1 manual website. And
@@ -44,23 +35,22 @@
                         all of the tests pass.</p>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-header">
+            <div class="row">
+                <div class="col-7">
                     <h5 class="card-title">Testing Using Pytest</h5>
-                </div>
-                <div class="card-body">
                     <p><strong>Step1:</strong> I Installed all the necessary library nedded for deploying</p>
                     <p><strong>Step2:</strong> Then I created a tests folder under app directory and created file for
                         testing</p>
                     <p><strong>Step3:</strong> Then I created testcases for testing as follows</p>
+                </div>
+                <div class="col-5">
                     <img src="{{ url_for('static', filename='images/ss4.png') }}" class="rounded img-fluid"
-                         alt="...">
+                         alt="..." style="width:400px;">
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-body">
+            <br/>
+            <div class="row">
+                <div class="col-7">
                     <h4>Outline</h4>
                     <b>Project Root Folder <- Root of the project</b>
                     <ul style="list-style-type: square">
@@ -126,11 +116,11 @@
                         </li>
                     </ul>
                 </div>
+                <div class="col-5">
+                    <img src="{{ url_for('static', filename='images/project-structure.png') }}" class="rounded img-fluid"
+                         alt="..." style="width:400px;">
+                </div>
             </div>
-        </div>
-        <div class="col">
-            <img src="{{ url_for('static', filename='images/copyright.png') }}" class="rounded img-fluid"
-                                 alt="...">
         </div>
     </div>
 

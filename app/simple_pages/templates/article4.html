@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="text">
+        <H3>SOLID Principle in Our Calculator Program</H3>
+        <div class="row">
+            <div class="col-7">
+                <p>The principle of SOLID coding is an acronym originated by Robert C. Martin, and it stands for five different conventions of coding.</p>
+                <p>SOLID is a set of object oriented design principles aimed at making code more maintainable and flexible. The SOLID principles apply to any object oriented language, but I'm going to concentrate on what they mean in a Python application in this post.</p>
+                <p>If you follow, these principles you can improve the reliability of your code by working on its structure and its logical consistency.</p>
+                <p>SOLID is an acronym that stands for the following:</p>
+                <ul><li><a href="#single-responsibility-principle"><strong>S</strong>ingle responsibility principle</a></li>
+                    <li><a href="#open-closed-principle"><strong>O</strong>pen/closed principle</a></li>
+                    <li><a href="#liskov-substitution-principle"><strong>L</strong>iskov substitution principle</a></li>
+                    <li><a href="#interface-segregation-principle"><strong>I</strong>nterface segregation principle</a></li>
+                    <li><a href="#dependency-inversion-principle"><strong>D</strong>ependency inversion principle</a></li>
+                </ul>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article4/ss1.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:400px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5 id="single-responsibility-principle"><strong>S</strong>ingle Responsibility Principle</H5>
+                <p>This states that a class should have a single responsibility, but more than that, a class should only have one reason to change.</p>
+                <p>If you look at the Addition class shown in the image. It contains only one static method and that is add. This method is used to perform addition. Which tells that it can only perform one functionality.</p>
+                <p>Thus we can say that this class follows Single Responsibility principle.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article4/ss2.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:200px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5 id="open-closed-principle"><strong>O</strong>pen Closed Principle</H5>
+                <p>In the open/closed principle classes should be open for extension, but closed for modification. Essentially meaning that classes should be extended to change functionality, rather than being altered into something else.</p>
+                <p>The purpose of the open-closed principle is to make it easy to add new features (or use cases) to the system without directly modifying the existing code.</p>
+                <p>We can see that Calcultor class in the image shown is child class of Addition class. Here in the child of calculator we are not modifying the add method of Addition class. On top of that we added few more features like substract, multiply.</p>
+                <p>Thus we can say that this Calculator class follows Open closed principle.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article4/ss3.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:400px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5 id="liskov-substitution-principle"><strong>L</strong>iskov Substitution Principle</H5>
+                <p>Created by Barbara Liskov in a 1987, this states that objects should be replaceable by their subtypes without altering how the program works. In other words, derived classes must be substitutable for their base classes without causing errors.</p>
+                <p>We have a Substraction Class which is an abstract class as shown in the figure next. It is implemented in the calculator class and we implemented the substract method here thus modifying the substract method from parent class in child class.</p>
+                <p>Thus we can say that this Calculator class follows Liskov Substitution Principle in our calculator program.</p>
+            </div>
+            <div id="substract" class="col-5">
+                <img src="{{ url_for('static', filename='images/Article4/ss5.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:200px">
+                <img src="{{ url_for('static', filename='images/Article4/ss4.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:200px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5 id="interface-segregation-principle"><strong>I</strong>nterface Segregation Principle</H5>
+                <p>This states that many client-specific interfaces are better than one general-purpose interface. In other words, classes should not be forced to implement interfaces they do not use.</p>
+                <p>We have a Substraction abstract class as shown in the figure next. I has one purpose and that is to do substration of the calculator class. It is being implemented in calcultor class and used in it to do substraction of the calculator functionality.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article4/ss5.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:200px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5 id="dependency-inversion-principle"><strong>D</strong>ependency Inversion Principle</H5>
+                <p>Perhaps the simplest of the principles, this states that classes should depend upon abstractions, not concretions. The dependency inversion principle aims to reduce the coupling between classes by creating an abstraction layer between them.</p>
+                <p>It's clearly shown in the substraction class shown in the image <a href="#substract">here</a> in our calculator program.</p>
+            </div>
+            <div class="col-5">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5><strong>F</strong>actory Design Pattern</H5>
+                <p>The factory pattern comes under the creational patterns list category. It provides one of the best ways to create an object. In factory pattern, objects are created without exposing the logic to client and referring to the newly created object using a common interface.</p>
+                <p>Factory patterns are implemented in Python using factory method. When a user calls a method such that we pass in a string and the return value as a new object is implemented through factory method. The type of object used in factory method is determined by string which is passed through method.</p>
+                <p>For Addition, Substration and Multiplication in operation/__init__py. we can create a factory method as shown in the image. Then we use it to declare the variables directly. By doing this we can easily create the new class without changing the whole code. If we want to add division. we can do it directly by adding the new class with division. We don't have change the whole structure of the program.</p>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/Article4/ss6.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:300px">
+                <img src="{{ url_for('static', filename='images/Article4/ss7.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:200px">
+            </div>
+        </div>
+    </div>
+{% endblock %}

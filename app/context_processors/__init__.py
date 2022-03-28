@@ -3,10 +3,10 @@ from os import getenv
 import datetime
 
 def utility_text_processors():
-    message = "hello world"
+    message = "This is kartha's webpage"
 
     def deployment_environment():
-        return getenv('FLASK_ENV', None)
+        return "Heroku" #getenv('FLASK_ENV', None)
 
     def current_year():
         currentDateTime = datetime.datetime.now()

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="text">
+        <H3>Demonstrates the principles of object oriented programming using Calculator Program: Encapsulation, Inheritance, Polymorphism, and Abstraction.</H3>
+        <div class="row">
+            <div class="col-7">
+                <H5>Encapsulation</H5>
+                <p>Encapsulation is one of the four fundamental concepts in object-oriented programming including abstraction, encapsulation, inheritance, and polymorphism</p>
+                <p>Encapsulation is the packing of data and functions that work on that data within a single object. By doing so, you can hide the internal state of the object from the outside. This is known as <strong>information hiding</strong>.</p>
+                <p>A class is an example of encapsulation. A class bundles data and methods into a single unit. And a class provides the access to its attributes via methods.</p>
+                <p>For the Calculator class shown in the image next. We have one attribute result which is a private variable. We can't access it directly outside of the Calculator Class.</p>
+                <p>Here in this call we have add method which is used to addition and subtract method is used for subtraction and multiply method used for multiplication.</p>
+                <p>set_result is used to set the value of result attribute.</p>
+                <p>get_result is used to get the value of the result attribute.</p>
+                <p>Thus with the help of the above function we can hide the how we implement the functionality operations and we also hide values of attributes in the Calculator class.</p>
+            </div>
+            <div class="col-5">
+                <h6>Example of Encapsulation in Calculator Program.</h6>
+                <img src="{{ url_for('static', filename='images/Article3/ss1.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:500px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5>Inheritance</H5>
+                <p>Inheritance is one of the four fundamental concepts in object-oriented programming.</p>
+                <p>Inheritance is the capability of one class to derive or inherit the properties from another class. The benefits of inheritance are:</p>
+                <ol>
+                    <li>It represents real-world relationships well.</li>
+                    <li>It provides <strong>reusability</strong> of a code. We don’t have to write the same code again and again. Also, it allows us to add more features to a class without modifying it.</li>
+                    <li>It is transitive in nature, which means that if class B inherits from another class A, then all the subclasses of B would automatically inherit from class A.</li>
+                </ol>
+                <p>In the First Image we define Addition class where we implemented the add method and we are using this in the calculator child class. we can inhetit it by calling the class name inside bracket next to class declaration. In doing so we can directly use it in our application.</p>
+            </div>
+            <div class="col-5">
+                <h6>Example of Inheritance in Calculator Program.</h6>
+                <img src="{{ url_for('static', filename='images/Article3/ss3.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:200px">
+                <img src="{{ url_for('static', filename='images/Article3/ss2.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:200px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <H5>Abstraction</H5>
+                <p>Abstraction is one of the four fundamental concepts in object-oriented programming.</p>
+                <p>Abstraction means hiding the complexity and only showing the essential features of the object. So in a way, Abstraction means hiding the real implementation and we, as a user, knowing only how to use it.</p>
+                <p>we imported ABC class and abstractmethod from abc. Then we declare abstract class named Substraction as shown in the first figure showing next.</p>
+                <p>In the Calculator class we implemented Substraction Abstract class and implemented substraction method in substract method as shown.</p>
+                <p>we can implement abstract method with the help of @abstractmethod keyword.</p>
+            </div>
+            <div class="col-5">
+                <h6>Example of Abstraction in Calculator Program.</h6>
+                <img src="{{ url_for('static', filename='images/Article3/ss5.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:200px">
+                <img src="{{ url_for('static', filename='images/Article3/ss4.png') }}" class="rounded"
+                         alt="..." style="width:400px; height:200px">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
