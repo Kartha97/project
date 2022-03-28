@@ -36,7 +36,7 @@ def test_calculator_result_property():
 
 
 def test_calculator_add_method():
-    """Testing the Calculator"""
+    """Testing the Calculator add"""
     calculator = Calculator()
     # this is show using the calculator object add method
     assert calculator.add(1, 1) == 2
@@ -49,9 +49,14 @@ def test_calculator_subtract_method():
 
 
 def test_calculator_multiply_method():
-    """Testing the Calculator Subtract"""
+    """Testing the Calculator multiply"""
     calculator = Calculator()
     assert calculator.multiply(1, 1) == 1
+
+def test_calculator_divide_method():
+    """Testing the Calculator divide"""
+    calculator = Calculator()
+    assert calculator.divide(1, 1) == 1
 
 
 def test_my_first_test_add():
