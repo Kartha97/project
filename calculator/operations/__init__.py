@@ -24,3 +24,11 @@ class Multiplication:
     def multiply(value_1, value_2):
         """ This is the multiply method"""
         return value_1 * value_2
+
+class Division:
+    """ This is the Division class"""
+
+    @staticmethod
+    def divide(value_1, value_2):
+        """ This is the divide method"""
+        return value_1 / value_2

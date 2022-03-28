@@ -1,8 +1,8 @@
 """ This is the Calculator Class"""
-from calculator.operations import Addition, Subtraction, Multiplication
+from calculator.operations import Addition, Subtraction, Multiplication, Division
 
 
-class Calculator(Addition, Subtraction, Multiplication):
+class Calculator(Addition, Subtraction, Multiplication, Division):
     """ This is the default result property"""
     def __init__(self):
         self._result = 0
@@ -19,8 +19,13 @@ class Calculator(Addition, Subtraction, Multiplication):
         return self.get_result()
 
     def multiply(self, value_1, value_2):
-        """ This is the subtract method"""
+        """ This is the multiply method"""
         self.set_result(Multiplication.multiply(value_1, value_2))
+        return self.get_result()
+
+    def divide(self, value_1, value_2):
+        """ This is the divide method"""
+        self.set_result(Division.divide(value_1, value_2))
         return self.get_result()
 
     def set_result(self, value):
